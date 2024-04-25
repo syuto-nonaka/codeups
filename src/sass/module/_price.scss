@@ -1,0 +1,121 @@
+@use "global" as *;
+
+.price {
+    padding: rem(84) 0 rem(84);
+    background-color: $light-green;
+    @include mq(md){
+        padding: rem(100) 0 rem(104);
+    }
+}
+
+.price__inner {
+    max-width: rem(600);
+    margin: auto;
+    @include mq(md){
+        max-width: 100%;
+    }
+}
+
+.price__wrapper {
+    margin-top: rem(28);
+    @include mq("md") {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        gap: 0 rem(20);
+        margin-top: rem(40);
+    }
+}
+
+.price__wrapper::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: clamp(rem(306),30.35vw,rem(437));
+        height: clamp(rem(141),13.96vw,rem(201));
+        left: calc(50% - clamp(rem(281),27.85vw,rem(401)));
+        transform: translateX(-50%);
+        bottom: rem(-178);
+        background: url(../images/top/price_fish.png) no-repeat center center / contain;
+    }
+}
+
+.price__image-wrapper {
+    width: 100%;
+    @include mq("md") {
+        max-width: rem(492);
+    }
+}
+
+.price__image {
+    width: 100%;
+}
+
+.price__image img {
+    object-fit: cover;
+    aspect-ratio: 345/227;
+    @include mq("md") {
+        max-width: rem(492);
+        aspect-ratio: 492/746;
+    }
+}
+
+.price__lists {
+    width: 100%;
+    margin-top: rem(40);
+    @include mq("md") {
+        max-width: rem(492);
+        margin-top: 0;
+    }
+}
+
+.price__list + li {
+    margin-top: rem(41);
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.price__list-title {
+    font-size: rem(16);
+    border-bottom: rem(1) solid $green;
+    padding-bottom: rem(3);
+}
+
+.price__list-figure {
+    margin-top: rem(10);
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+.price__list-figure dl {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 rem(20);
+    font-size: rem(14);
+    @include mq("md") {
+        font-size: rem(16);
+    }
+}
+
+.price__list-figure dl + dl {
+    margin-top: rem(11);
+    @include mq("md") {
+        margin-top: rem(8);
+    }
+}
+
+.price__btn {
+    text-align: center;
+    margin-top: rem(41);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.price__btn .btn {
+    max-width: rem(202);
+    padding: rem(15.5) rem(5);
+}

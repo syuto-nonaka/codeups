@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.voice__inner {
+    max-width: rem(600);
+    margin: auto;
+    @include mq(md){
+        max-width: 100%;
+    }
+}
+
+.voice__list {
+    margin-top: rem(44);
+    @include mq("md") {
+        position: relative;
+        margin-top: rem(30);
+    }
+}
+
+.voice__list::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(301);
+        height: rem(138);
+        left: calc(50% - clamp(rem(329),32.64vw,rem(470)));
+        transform: translateX(-50%);
+        top: rem(-216);
+        background: url(../images/top/voice_fish.png) no-repeat center center / contain;
+    }
+}
+
+.voice__list::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(71);
+        height: rem(162);
+        right: 0;
+        bottom: rem(-205);
+        background: url(../images/top/voice_rock-cod.png) no-repeat center center / contain;
+    }
+}
+
+.voice__btn {
+    text-align: center;
+    margin-top: rem(41);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.voice__btn .btn {
+    max-width: rem(202);
+    padding: rem(15.5) rem(5);
+}

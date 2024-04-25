@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.campaign-card {
+    height: auto;
+    background-color: $white;
+    box-shadow: rem(5) rem(5) rem(10) rgba($color: #000, $alpha: .3);
+    transition: .3s;
+}
+
+.campaign-card:hover {
+    @include mq(md){
+        background-color: #DDF0F1;
+    }
+}
+
+.campaign-card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.campaign-card__image img {
+    object-fit: cover;
+    aspect-ratio: 333/223;
+}
+
+.campaign-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 0 rem(16) rem(23);
+    margin-top: rem(16);
+    @include mq(md){
+        padding: 0 rem(16) rem(40);
+        margin-top: rem(24);
+    }
+}
+
+.campaign-card__category {
+    display: inline-block;
+    font-size: rem(12);
+    color: $green;
+    border: rem(1) solid $green;
+    padding: rem(5) rem(11);
+    @include mq(md){
+        padding: rem(7) rem(15);
+    }
+}
+
+.campaign-card__title {
+    font-size: rem(16);
+    font-weight: $medium;
+    padding-bottom: rem(8);
+    margin-top: rem(4);
+}
+
+.campaign-card__pice {
+    width: 100%;
+    margin-top: auto;
+    padding-top: rem(9);
+    border-top: rem(1) solid $green;
+    @include mq(md){
+        padding-top: rem(15);
+    }
+}
+
+.campaign-card__pice-text {
+    font-size: rem(14);
+    text-align: center;
+    @include mq(md){
+        font-size: rem(16);
+        transform: translateX(rem(-8));
+    }
+}
+
+.campaign-card__pice-unit {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: $fourth-font-family;
+    font-weight: $bold;
+    gap: 0 rem(16);
+    margin-top: rem(10);
+    @include mq(md){
+        gap: 0 rem(28);
+        margin-top: rem(8);
+    }
+}
+
+.campaign-card__pice-before {
+    position: relative;
+    font-size: rem(20);
+    line-height: 1.2;
+    @include mq(md){
+        font-size: rem(24);
+    }
+}
+
+.campaign-card__pice-before::before {
+    position: absolute;
+    content: "";
+    height: rem(3);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    background-color: #C94800;
+}
+
+.campaign-card__pice-after {
+    font-size: rem(32);
+    line-height: 1;
+    color: $green;
+    @include mq(md){
+        font-size: rem(40);
+    }
+}

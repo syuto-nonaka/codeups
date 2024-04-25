@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.about__inner {
+    max-width: rem(600);
+    margin: auto;
+    @include mq(md){
+        max-width: 100%;
+    }
+}
+
+.about__main {
+    margin-top: rem(27);
+    @include mq(md){
+        position: relative;
+        margin-top: rem(40);
+    }
+}
+
+.about__main::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: clamp(rem(136),13.47vw,rem(194));
+        height: clamp(rem(127),12.57vw,rem(181));
+        left: calc(50% + clamp(rem(354),30.76vw,rem(443)));
+        bottom:  clamp(rem(-90),-6.25vw,rem(-63));
+        background: url(../images/top/about_coral.png) no-repeat center center / contain;
+    }
+}
+
+.about__image {
+    display: block;
+}
+
+.about__image img {
+    object-fit: cover;
+    aspect-ratio: 345/212;
+    @include mq(md){
+        aspect-ratio: 1080/661;
+    }
+}
+
+.about__wrapper {
+    position: relative;
+    margin-top: rem(40);
+    @include mq(md){
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        gap: 0 rem(20);
+        width: 100%;
+        max-width: rem(840);
+        right: 3.8%;
+        top: 48.2%;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+}
+
+.about__subtitle {
+    font-size: rem(40);
+    line-height: 1;
+    font-family: $second-font-family;
+    font-weight: $normal;
+    color: $green;
+    @include mq("md") {
+        font-size: clamp(rem(72),5.56vw,rem(80));
+        line-height: 1.25;
+        color: $white;
+        width: 100%;
+        max-width: rem(400);
+    }
+}
+
+.about__content {
+    margin-top: rem(16);
+    @include mq(md){
+        width: 100%;
+        max-width: rem(400);
+        margin-top: 0;
+    }
+}
+
+.about__text {
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+.about__btn {
+    margin-top: rem(50);
+    text-align: center;
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.about__btn .btn {
+    max-width: rem(202);
+    padding: rem(15.5) rem(5);
+}

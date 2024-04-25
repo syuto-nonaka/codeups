@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.mv {
+    position: relative;
+    height: 100vh;
+    min-height: rem(400);
+    z-index: 1;
+}
+
+.mv__inner {
+    position: relative;
+    height: inherit;
+}
+
+.mv__title {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    width: 100%;
+    max-width: rem(241);
+    @include mq("md") {
+        max-width: rem(484);
+        top: 51%;
+    }
+}
+
+.mv__swiper,
+.mv__swiper .swiper-img,
+.mv__swiper .swiper-img img {
+    height: inherit;
+    min-height: inherit;
+}
+
+.mv__swiper .swiper-img img {
+    width: 100%;
+    object-fit: cover;
+    @include mq("md") {
+    }
+}

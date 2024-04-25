@@ -1,0 +1,106 @@
+@use "global" as *;
+
+.campaign {
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.campaign::-webkit-scrollbar {
+    display: none;
+}
+
+.campaign__inner {
+    max-width: rem(600);
+    margin: auto;
+    @include mq(md){
+        max-width: 100%;
+    }
+}
+
+.campaign__inner .inner {
+    position: relative;
+}
+
+.campaign__swiper-button-wrapper {
+    position: absolute;
+    display: flex;
+    gap: 0 rem(80);
+    right: rem(25);
+    top: 0;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-prev,
+.campaign__swiper-button-wrapper .swiper-button-next {
+    position: relative;
+    width: rem(80);
+    height: rem(80);
+    background-color: $white;
+    border: rem(1) solid $green;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    transition: .3s;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-prev:hover,
+.campaign__swiper-button-wrapper .swiper-button-next:hover {
+    background-color: $green;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-prev::before,
+.campaign__swiper-button-wrapper .swiper-button-next::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(42);
+    height: rem(8);
+}
+
+.campaign__swiper-button-wrapper .swiper-button-prev::before {
+    background: url(../images/common/icon_arrow_left_green.svg) no-repeat center center / contain;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-prev:hover::before {
+    background: url(../images/common/icon_arrow_left_white.svg) no-repeat center center / contain;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-next::before {
+    background: url(../images/common/icon_arrow_right_green.svg) no-repeat center center / contain;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-next:hover::before {
+    background: url(../images/common/icon_arrow_right_white.svg) no-repeat center center / contain;
+}
+
+.campaign__swiper-button-wrapper .swiper-button-next:after,
+.campaign__swiper-button-wrapper .swiper-button-prev:after {
+    content: "";
+}
+
+.campaign__swiper {
+    padding-bottom: rem(15);
+    margin-top: rem(28);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    @include mq(md){
+        margin-top: rem(40);
+    }
+}
+
+.campaign__btn {
+    text-align: center;
+    padding-bottom: rem(6);
+    margin-top: rem(26);
+    @include mq(md){
+        margin-top: rem(65);
+    }
+}
+
+.campaign__btn .btn {
+    max-width: rem(202);
+    padding: rem(15.5) rem(5);
+}
