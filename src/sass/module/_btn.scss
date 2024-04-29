@@ -51,6 +51,7 @@
     bottom: rem(-5);
     left: rem(3);
     border: rem(1) solid $green;
+    z-index: -1;
 }
 
 .btn span {
