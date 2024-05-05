@@ -3,7 +3,7 @@
 .blog-list {
     padding: 0 rem(6);
     @include mq("md") {
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
         gap: rem(80) rem(40);
         padding: 0;
@@ -15,18 +15,6 @@
     background-color: $white;
     box-shadow: rem(2) rem(2) rem(10) rgba($color: #000, $alpha: .25);
     transition: .3s;
-}
-
-.blog-list__item.blog-list__item--two {
-    @include mq("md") {
-        width: calc(50% - rem(40) * 1 / 2);
-    }
-}
-
-.blog-list__item.blog-list__item--three {
-    @include mq("md") {
-        width: calc(33.3333% - rem(40) * 2 / 3);
-    }
 }
 
 .blog-list__item:hover {

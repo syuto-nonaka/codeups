@@ -8,22 +8,21 @@
     width: 100%;
     text-align: center;
     transition: .3s;
-}
-
-.btn.btn--green {
+    max-width: rem(202);
     color: $white;
     background-color: $green;
     border: rem(1) solid $green;
     transform: translateX(rem(-2));
+    padding: rem(15.5) rem(5);
 }
 
-.btn.btn--green:hover {
+.btn:hover {
     @include mq(md){
         color: $green;
     }
 }
 
-.btn.btn--green:before {
+.btn:before {
     content: '';
     position: absolute;
     top: 0;
@@ -37,13 +36,13 @@
     transform-origin: left top;
 }
 
-.btn.btn--green:hover:before{
+.btn:hover:before{
     @include mq(md){
         transform: scale(1, 1);
     }
 }
 
-.btn.btn--green::after {
+.btn::after {
     position: absolute;
     content: "";
     top: rem(3);
@@ -60,7 +59,7 @@
     padding-right: rem(50);
 }
 
-.btn.btn--green span::after {
+.btn span::after {
     position: absolute;
     content: "";
     width: rem(42);
@@ -71,7 +70,7 @@
     background: url(../images/common/icon_arrow_right_white.svg) no-repeat center center / contain;
 }
 
-.btn.btn--green:hover span::after {
+.btn:hover span::after {
     @include mq(md){
         background: url(../images/common/icon_arrow_right_green.svg) no-repeat center center / contain;
     }

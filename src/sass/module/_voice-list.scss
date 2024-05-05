@@ -2,19 +2,16 @@
 
 .voice-list {
     @include mq("md") {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         flex-wrap: wrap;
-        gap: rem(80) rem(20);
+        gap: rem(80) rem(40);
     }
 }
 
 .voice-list__item {
     box-shadow: rem(2) rem(2) rem(10) rgba($color: #000, $alpha: .25);
     transition: .3s;
-    @include mq("md") {
-        width: calc(50% - rem(40) * 1 / 2);
-    }
 }
 
 .voice-list__item + li {

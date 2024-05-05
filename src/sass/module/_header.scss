@@ -53,14 +53,11 @@
 .header__lists {
     display: flex;
     height: inherit;
+    gap: clamp(rem(20),2.78vw,rem(40));
 }
 
 .header__list {
     height: inherit;
-}
-
-.header__list:not(:last-of-type) {
-    margin-right: clamp(rem(20),2.78vw,rem(40));
 }
 
 .header__list-link {
@@ -170,7 +167,6 @@
     height: 100vh;
     padding: rem(100) 0 rem(80);
     background-color: $green;
-    overflow-y: scroll;
     scrollbar-width: none;
 }
 
@@ -179,6 +175,8 @@
 }
 
 .header__drawer-nav {
+    height: inherit;
+    overflow-y: scroll;
     display: flex;
     gap: 0 rem(5);
     padding: 0 $padding-sp;

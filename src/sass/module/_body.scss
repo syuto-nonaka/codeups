@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.body {
+    position: relative;
+}
+
+.body.is-open {
+    overflow: hidden;
+}

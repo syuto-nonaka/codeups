@@ -12,19 +12,33 @@
     height: inherit;
 }
 
-.mv__title {
+.mv__content {
     position: absolute;
     content: "";
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 2;
-    width: 100%;
-    max-width: rem(241);
+    text-align: center;
+    color: $white;
+}
+
+.mv__title {
+    font-size: rem(40);
+    letter-spacing: 0.54em;
+    font-weight: $normal;
+    font-family: $fourth-font-family;
+    line-height: 1.25;
+    transform: translateX(rem(10));
     @include mq("md") {
-        max-width: rem(484);
-        top: 51%;
+        font-size: rem(80);
+        transform: translateX(rem(21));
     }
+}
+
+.mv__subtitle {
+    font-size: rem(20);
+    font-family: $second-font-family;
 }
 
 .mv__swiper,
@@ -37,6 +51,4 @@
 .mv__swiper .swiper-img img {
     width: 100%;
     object-fit: cover;
-    @include mq("md") {
-    }
 }

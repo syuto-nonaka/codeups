@@ -3,9 +3,6 @@
 .voice__inner {
     max-width: rem(600);
     margin: auto;
-    @include mq(md){
-        max-width: 100%;
-    }
 }
 
 .voice__list {
@@ -22,7 +19,7 @@
         content: "";
         width: rem(301);
         height: rem(138);
-        left: calc(50% - clamp(rem(329),32.64vw,rem(470)));
+        left: calc(50% - clamp(rem(363),32.64vw,rem(470)));
         transform: translateX(-50%);
         top: rem(-216);
         background: url(../images/top/voice_fish.png) no-repeat center center / contain;
@@ -47,9 +44,4 @@
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.voice__btn .btn {
-    max-width: rem(202);
-    padding: rem(15.5) rem(5);
 }

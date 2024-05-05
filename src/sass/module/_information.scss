@@ -11,9 +11,6 @@
 .information__inner {
     max-width: rem(600);
     margin: auto;
-    @include mq(md){
-        max-width: 100%;
-    }
 }
 
 .information__wrapper {
@@ -72,9 +69,4 @@
 .information__btn {
     text-align: center;
     margin-top: rem(40);
-}
-
-.information__btn .btn {
-    max-width: rem(202);
-    padding: rem(15.5) rem(5);
 }

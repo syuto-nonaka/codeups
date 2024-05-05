@@ -6,12 +6,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-hamburger").click(function () {
             $(this).toggleClass("is-open");
             $(".js-drawer").fadeToggle();
+            $(".body").toggleClass("is-open");
         });
 
         // ドロワーナビのaタグをクリックで閉じる
         $(".js-drawer a[href]").on("click", function () {
             $(".js-hamburger").removeClass("is-open");
             $(".js-drawer").fadeOut();
+            $(".body").removeClass("is-open");
         });
 
         // resizeイベント
@@ -19,6 +21,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             if (window.matchMedia("(min-width: 768px)").matches) {
                 $(".js-hamburger").removeClass("is-open");
                 $(".js-drawer").fadeOut();
+                $(".body").removeClass("is-open");
             }
         });
     });
@@ -101,41 +104,46 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
     // ページトップボタン
-    $(function () {
-        const pageTop = $(".js-page-top");
-        pageTop.hide();
-        $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            pageTop.fadeIn();
-        } else {
-            pageTop.fadeOut();
-        }
-        });
-        pageTop.click(function () {
-        $("body,html").animate(
-            {
-            scrollTop: 0,
-            },
-            500
-        );
-        return false;
-        });
-        // フッター手前でストップ
-        $(".js-page-top").hide();
-        $(window).on("scroll", function () {
+    $(window).on("scroll", function () {
         let scrollHeight = $(document).height();
         let scrollPosition = $(window).height() + $(window).scrollTop();
-        let footHeight = $(".js-footer").innerHeight();
-        if (scrollHeight - scrollPosition <= footHeight) {
-            $(".js-page-top").css({
-            position: "absolute",
-            });
+        let footHeight = $("footer").innerHeight();
+        let pageTopButton = $(".js-page-top");
+
+        if ($(window).width() < 768) {
+            // 画面幅が768px未満の場合の bottom の設定
+            if (scrollHeight - scrollPosition <= footHeight) {
+                pageTopButton.css({
+                    position: "absolute",
+                    bottom: footHeight + 16,
+                });
+            } else {
+                pageTopButton.css({
+                    position: "fixed",
+                    bottom: "16px",
+                });
+            }
         } else {
-            $(".js-page-top").css({
-            position: "fixed",
-            });
+            // 画面幅が768px以上の場合の bottom の設定
+            if (scrollHeight - scrollPosition <= footHeight) {
+                pageTopButton.css({
+                    position: "absolute",
+                    bottom: footHeight + 20,
+                });
+            } else {
+                pageTopButton.css({
+                    position: "fixed",
+                    bottom: "20px",
+                });
+            }
         }
-        });
+
+    // スクロール位置が500pxを超えたらページトップボタンを表示
+        if ($(this).scrollTop() > 500) {
+            pageTopButton.fadeIn();
+        } else {
+            pageTopButton.fadeOut();
+        }
     });
 
 });

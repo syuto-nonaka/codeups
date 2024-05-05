@@ -1,18 +1,8 @@
 @use "global" as *;
 
-.contact {
-    padding-bottom: rem(104);
-    @include mq("md") {
-        padding-bottom: rem(160);
-    }
-}
-
 .contact__inner {
     max-width: rem(600);
     margin: auto;
-    @include mq(md){
-        max-width: 100%;
-    }
 }
 
 .contact__wrapper {
@@ -35,9 +25,8 @@
     @include mq(md){
         width: clamp(rem(211),21.39vw,rem(308));
         height: clamp(rem(97),10.21vw,rem(147));
-        right: auto;
-        left: calc(50% + clamp(rem(256),25.42vw,rem(366)));
-        top: rem(-42);
+        right: calc(50% - clamp(rem(515),46.81vw,rem(674)));
+        top: rem(-40);
     }
 }
 
@@ -180,11 +169,6 @@
     @include mq("md") {
         margin-top: rem(39);
     }
-}
-
-.contact__btn .btn {
-    max-width: rem(202);
-    padding: rem(15.5) rem(5);
 }
 
 .contact__btn .btn.btn--green::after {

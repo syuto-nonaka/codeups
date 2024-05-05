@@ -3,12 +3,10 @@
 .layout-page-top {
     position: fixed;
     right: rem(15);
-    bottom: rem(16);
     z-index: 10;
     border-radius: 50%;
     @include mq("md") {
         right: rem(20);
-        bottom: rem(20);
         box-shadow: 0 rem(4) rem(4) rgba($color:$black , $alpha: .25);
     }
 }

@@ -11,9 +11,6 @@
 .price__inner {
     max-width: rem(600);
     margin: auto;
-    @include mq(md){
-        max-width: 100%;
-    }
 }
 
 .price__wrapper {
@@ -34,7 +31,7 @@
         content: "";
         width: clamp(rem(306),30.35vw,rem(437));
         height: clamp(rem(141),13.96vw,rem(201));
-        left: calc(50% - clamp(rem(281),27.85vw,rem(401)));
+        left: calc(50% - clamp(rem(347),27.85vw,rem(401)));
         transform: translateX(-50%);
         bottom: rem(-178);
         background: url(../images/top/price_fish.png) no-repeat center center / contain;
@@ -113,9 +110,4 @@
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.price__btn .btn {
-    max-width: rem(202);
-    padding: rem(15.5) rem(5);
 }

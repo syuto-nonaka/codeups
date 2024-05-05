@@ -26,9 +26,6 @@
 .blog__inner {
     max-width: rem(600);
     margin: auto;
-    @include mq(md){
-        max-width: 100%;
-    }
 }
 
 .blog__title .section-title__en,
@@ -43,6 +40,7 @@
     margin-top: rem(27);
     @include mq("md") {
         position: relative;
+        grid-template-columns: 1fr 1fr 1fr;
         margin-top: rem(80);
     }
 }
@@ -54,7 +52,7 @@
         width: clamp(rem(306),30.35vw,rem(437));
         height: rem(201);
         top: rem(-222);
-        left: calc(50% - clamp(rem(281),27.85vw,rem(401)));
+        left: calc(50% - clamp(rem(340),27.85vw,rem(401)));
         background: url(../images/top/blog_fish.png) no-repeat center center / contain;
         transform: translateX(-50%);
     }
@@ -66,9 +64,4 @@
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.blog__btn .btn {
-    max-width: rem(202);
-    padding: rem(15.5) rem(5);
 }

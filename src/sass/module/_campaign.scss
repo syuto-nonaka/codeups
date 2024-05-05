@@ -17,7 +17,7 @@
     }
 }
 
-.campaign__inner .inner {
+.campaign__inner.inner {
     position: relative;
 }
 
@@ -98,9 +98,4 @@
     @include mq(md){
         margin-top: rem(65);
     }
-}
-
-.campaign__btn .btn {
-    max-width: rem(202);
-    padding: rem(15.5) rem(5);
 }
