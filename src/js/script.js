@@ -6,14 +6,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(".js-hamburger").click(function () {
             $(this).toggleClass("is-open");
             $(".js-drawer").fadeToggle();
-            $(".body").toggleClass("is-open");
+            $(".js-body").toggleClass("is-open");
         });
 
         // ドロワーナビのaタグをクリックで閉じる
         $(".js-drawer a[href]").on("click", function () {
             $(".js-hamburger").removeClass("is-open");
             $(".js-drawer").fadeOut();
-            $(".body").removeClass("is-open");
+            $(".js-body").removeClass("is-open");
         });
 
         // resizeイベント
@@ -21,7 +21,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             if (window.matchMedia("(min-width: 768px)").matches) {
                 $(".js-hamburger").removeClass("is-open");
                 $(".js-drawer").fadeOut();
-                $(".body").removeClass("is-open");
+                $(".js-body").removeClass("is-open");
             }
         });
     });

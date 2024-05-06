@@ -29,10 +29,9 @@
     font-weight: $normal;
     font-family: $fourth-font-family;
     line-height: 1.25;
-    transform: translateX(rem(10));
+    text-indent: 0.54em;
     @include mq("md") {
         font-size: rem(80);
-        transform: translateX(rem(21));
     }
 }
 
