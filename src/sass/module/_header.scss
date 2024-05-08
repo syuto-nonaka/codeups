@@ -175,7 +175,7 @@
 }
 
 .header__drawer-nav {
-    height: inherit;
+    height: 100%;
     overflow-y: scroll;
     display: flex;
     gap: 0 rem(5);
@@ -221,4 +221,3 @@
     background-position: center;
     background-size: contain;
 }
-

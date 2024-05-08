@@ -40,7 +40,6 @@
     margin-top: rem(27);
     @include mq("md") {
         position: relative;
-        grid-template-columns: 1fr 1fr 1fr;
         margin-top: rem(80);
     }
 }

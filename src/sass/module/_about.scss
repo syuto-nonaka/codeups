@@ -19,11 +19,7 @@
         content: "";
         width: clamp(rem(136),13.47vw,rem(194));
         height: clamp(rem(127),12.57vw,rem(181));
-
-
-
         right: calc(50% - clamp(rem(512),44.24vw,rem(637)));
-
         bottom:  clamp(rem(-90),-6.25vw,rem(-63));
         background: url(../images/top/about_coral.png) no-repeat center center / contain;
     }
