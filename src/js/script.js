@@ -31,6 +31,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         loop: true,
         speed: 2000,
         effect: "fade",
+        simulateTouch: false,
         fadeEffect: {
             crossFade: true,
         },
