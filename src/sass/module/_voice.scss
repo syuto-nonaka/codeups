@@ -5,7 +5,7 @@
     margin: auto;
 }
 
-.voice__list {
+.voice__cards {
     margin-top: rem(44);
     @include mq("md") {
         position: relative;
@@ -13,7 +13,7 @@
     }
 }
 
-.voice__list::before {
+.voice__cards::before {
     @include mq("md") {
         position: absolute;
         content: "";
@@ -26,7 +26,7 @@
     }
 }
 
-.voice__list::after {
+.voice__cards::after {
     @include mq("md") {
         position: absolute;
         content: "";

@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.voice-cards {
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        gap: rem(80) rem(40);
+    }
+}

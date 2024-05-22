@@ -1,7 +1,9 @@
 @use "global" as *;
 
 .campaign-card {
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-color: $white;
     box-shadow: rem(5) rem(5) rem(10) rgba($color: #000, $alpha: .3);
     transition: .3s;
@@ -11,12 +13,6 @@
     @include mq(md){
         background-color: #DDF0F1;
     }
-}
-
-.campaign-card a {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
 }
 
 .campaign-card__image img {

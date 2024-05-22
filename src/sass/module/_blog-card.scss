@@ -1,62 +1,51 @@
 @use "global" as *;
 
-.blog-list {
-    padding: 0 rem(6);
-    @include mq("md") {
-        display: grid;
-        flex-wrap: wrap;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: rem(80) rem(40);
-        padding: 0;
-    }
-}
-
-.blog-list__item {
+.blog-card {
     width: 100%;
     background-color: $white;
     box-shadow: rem(2) rem(2) rem(10) rgba($color: #000, $alpha: .25);
     transition: .3s;
 }
 
-.blog-list__item:hover {
+.blog-card:hover {
     @include mq("md") {
         background-color: #DDF0F1;
     }
 }
 
-.blog-list__item + li {
+.blog-card + li {
     margin-top: rem(40);
     @include mq("md") {
         margin-top: 0;
     }
 }
 
-.blog-list__item a {
+.blog-card a {
     display: block;
     padding: rem(16) rem(16) rem(24);
 }
 
-.blog-list__item-image img {
+.blog-card__image img {
     object-fit: cover;
     aspect-ratio: 301/201;
 }
 
-.blog-list__item-content {
+.blog-card__content {
     margin-top: rem(17);
 }
 
-.blog-list__item-date {
+.blog-card__date {
     font-size: rem(12);
     font-family: $second-font-family;
 }
 
-.blog-list__item-title {
+.blog-card__title {
     font-size: rem(16);
     font-weight: $medium;
     padding-bottom: rem(4);
     border-bottom: rem(1) solid $green;
 }
 
-.blog-list__item-text {
+.blog-card__text {
     margin-top: rem(16);
 }

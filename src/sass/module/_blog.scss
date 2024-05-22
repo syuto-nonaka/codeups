@@ -28,15 +28,15 @@
     margin: auto;
 }
 
-.blog__title .section-title__en,
-.blog__title .section-title__en:first-letter,
-.blog__title .section-title__ja {
+.blog__title .section-title--white .section-title__en,
+.blog__title .section-title--white .section-title__en:first-letter,
+.blog__title .section-title--white .section-title__ja {
     @include mq(md){
         color: $white;
     }
 }
 
-.blog__list {
+.blog__cards {
     margin-top: rem(27);
     @include mq("md") {
         position: relative;
@@ -44,7 +44,7 @@
     }
 }
 
-.blog__list::before {
+.blog__cards::before {
     @include mq("md") {
         position: absolute;
         content: "";
