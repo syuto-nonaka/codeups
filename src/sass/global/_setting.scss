@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "_breakpoints" as *;
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
@@ -42,3 +43,11 @@ $regular: 300;
 $normal: 400;
 $medium: 500;
 $bold: 700;
+
+a.tel[href*="tel:"] {
+  @include mq("md") {
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+  }
+}

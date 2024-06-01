@@ -1,28 +1,19 @@
 @use "global" as *;
 
 .voice-card {
+    display: block;
     box-shadow: rem(2) rem(2) rem(10) rgba($color: #000, $alpha: .25);
     transition: .3s;
-}
-
-.voice-card + li {
-    margin-top: rem(40);
+    padding: rem(15) rem(16) rem(24);
     @include mq("md") {
-        margin-top: 0;
+        height: 100%;
+        padding: rem(24) rem(24) rem(24);
     }
 }
 
 .voice-card:hover {
     @include mq("md") {
         background-color: #DDF0F1;
-    }
-}
-
-.voice-card a {
-    display: block;
-    padding: rem(15) rem(16) rem(24);
-    @include mq("md") {
-        padding: rem(24) rem(24) rem(24);
     }
 }
 

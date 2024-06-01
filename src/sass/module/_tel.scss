@@ -1,9 +1,0 @@
-@use "global" as *;
-
-a.tel[href*="tel:"] {
-    @include mq("md") {
-        pointer-events: none;
-        cursor: default;
-        text-decoration: none;
-    }
-}

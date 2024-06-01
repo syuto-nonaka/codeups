@@ -88,20 +88,19 @@
 }
 
 .price__list-figure dl {
-    display: flex;
+    display: grid;
     justify-content: space-between;
-    gap: 0 rem(20);
+    grid-template-columns: 1fr rem(65);
+    gap: rem(11) rem(20);
     font-size: rem(14);
     @include mq("md") {
         font-size: rem(16);
+        gap: rem(8) rem(20);
     }
 }
 
-.price__list-figure dl + dl {
-    margin-top: rem(11);
-    @include mq("md") {
-        margin-top: rem(8);
-    }
+.price__list-figure dd {
+    text-align: right;
 }
 
 .price__btn {
